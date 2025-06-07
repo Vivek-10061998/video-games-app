@@ -6,11 +6,13 @@ import { GameService } from '../../services/game.service';
 import { RouterModule } from '@angular/router';
 
 import { FormsModule } from '@angular/forms';
+import { SearchBarComponent } from '../../components/search-bar/search-bar.component';
+import { GameCardComponent } from '../../components/game-card/game-card.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, RouterModule, FormsModule],
+  imports: [CommonModule, RouterModule, FormsModule,SearchBarComponent,GameCardComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

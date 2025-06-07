@@ -1,0 +1,25 @@
+.game-card {
+  background-color: #0e1a2b;
+  color: #ffffff;
+  font-family: 'Mulish', sans-serif;
+  margin-bottom: 1rem;
+}
+
+h5 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+.score-badge {
+  width: 40px;
+  height: 40px;
+  background-color: #5692e8;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+}

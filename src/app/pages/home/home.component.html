@@ -1,16 +1,14 @@
-<div *ngIf="!loading">
-  <div *ngFor="let game of games" class="mb-3 p-3 rounded d-flex justify-content-between align-items-start" style="background-color: #0e1a2b;">
-    <!-- Game Info Section -->
-    <div class="me-3" style="flex: 1;">
-      <h5 class="card-title mb-2">{{ game.name }}</h5>
-      <p class="mb-1"><strong>Release Date:</strong> {{ game.publishedAt | date }}</p>
-      <p class="mb-0">{{ game.summary | slice:0:300 }}...</p>
+<div class="container-fluid mt-4 text-white">
+  <div class="row">
+    <div class="col-md-3 mb-4">
+      <app-search-bar></app-search-bar>
     </div>
 
-    <!-- Rating Badge -->
-    <div class="d-flex align-items-center justify-content-center rounded-circle text-white"
-         style="width: 40px; height: 40px; background-color: #5692e8; font-weight: bold;">
-      {{ game.rating | number:'1.0-0' }}
+    <div class="col-md-9">
+      <!-- Game cards list here -->
+         <app-game-card></app-game-card>
+  <app-game-card></app-game-card>
+  <app-game-card></app-game-card>
     </div>
   </div>
 </div>

@@ -1,0 +1,43 @@
+.filter-panel {
+  background-color: #0e1a2b;
+  color: #ffffff;
+  font-family: 'Mulish', sans-serif;
+}
+
+.form-label {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+input,
+select {
+  background-color: #182c47;
+  color: #182c47;
+  border: none;
+}
+
+input::placeholder {
+  color: #c1d1e8;
+}
+
+.btn-primary {
+  background-color: #5692e8;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+.form-control:disabled {
+    background-color: #0f2e4c;
+    opacity: 1;
+}
+.form-select{
+    background-color: #0f2e4c;
+    color:white
+}
+.button1 svg{
+    width: 42px;
+    height: 30px;
+    padding: 5px;
+    background: #5692e8;
+}
