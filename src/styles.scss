@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  font-family: 'Mulish', sans-serif;
+  background: linear-gradient(#081221, #03080f);
+  color: #c1d1e8;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, .navbar-brand, .nav-link, .btn {
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+
+a.nav-link.active {
+  color: #5692e8 !important;
+}
