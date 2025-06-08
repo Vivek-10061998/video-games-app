@@ -1,10 +1,12 @@
 import { Component, Input } from '@angular/core';
-import { Game } from '../../models/game.model';
+import { Game } from '../../services/game.service';
+import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-game-card',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './game-card.component.html',
   styleUrl: './game-card.component.scss'
 })

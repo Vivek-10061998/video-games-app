@@ -1,11 +1,22 @@
 <nav class="navigation">
-  <div class="nav-content">
-    
-    <a routerLink="/video-games" routerLinkActive="active">
-        <span class="logo">VIDEO</span>
-        VIDEO GAMES</a>
-    <a routerLink="/contact" routerLinkActive="active">
-        <span class="logo-contact">CONTACT</span>
-        CONTACT</a>
-  </div>
+ <div class="nav-content">
+  <a 
+    routerLink="/" 
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }"
+  >
+    <span *ngIf="router.url === '/' || router.url === '/home'" class="logo">VIDEO</span>
+    VIDEO GAMES
+  </a>
+
+  <a 
+    routerLink="/contact" 
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }"
+  >
+    <span *ngIf="router.url === '/contact'" class="logo-contact">CONTACT</span>
+    CONTACT
+  </a>
+</div>
+
 </nav>

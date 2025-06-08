@@ -1,34 +1,59 @@
 <div class="filter-panel p-3 rounded">
-    <h5 class="mb-3">Filter Results</h5>
+  <h5 class="mb-3">Filter Results</h5>
 
-    <div class="mb-3">
-        <label for="name" class="form-label">Name (contains)</label>
-        <input id="name" type="text" class="form-control" placeholder="Text string" disabled>
+  <div class="mb-3">
+    <label for="name" class="form-label">Name (contains)</label>
+    <input
+      [(ngModel)]="nameInput"
+      (ngModelChange)="applyFilter()"
+      type="text"
+      class="form-control"
+      placeholder="Text string"
+    />
+  </div>
+
+  <div class="mb-3">
+    <label for="score" class="form-label">Minimum Score</label>
+    <input
+      [(ngModel)]="scoreInput"
+      (ngModelChange)="applyFilter()"
+      type="text"
+      class="form-control"
+      placeholder="1 - 10"
+    />
+  </div>
+
+  <div class="mb-3">
+    <label for="orderBy" class="form-label">Order By</label>
+    <div class="button1 d-flex align-items-center gap-2">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        fill="currentColor"
+        class="bi bi-arrow-up"
+        viewBox="0 0 16 16"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5"
+        />
+      </svg>
+
+      <select
+        [(ngModel)]="sortOption"
+        (ngModelChange)="applyFilter()"
+        class="form-select"
+      >
+        <option value="firstReleaseDate">Release Date</option>
+        <option value="rating">Score</option>
+        <option value="name">Name</option>
+      </select>
     </div>
+  </div>
 
-    <div class="mb-3">
-        <label for="score" class="form-label">Minimum Score</label>
-        <input id="score" type="text" class="form-control" placeholder="1 - 10" disabled>
-    </div>
-
-    <div class="mb-3">
-        <label for="orderBy" class="form-label">Order By</label>
-
-        <div class="button1 d-flex align-items-center gap-2">
-           
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up"
-                viewBox="0 0 16 16">
-                <path fill-rule="evenodd"
-                    d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5" />
-            </svg>
-             <select id="orderBy" class="form-select">
-                <option selected>Release Date</option>
-                <option>Score</option>
-                <option>Name</option>
-            </select>
-        </div>
-
-    </div>
-
-    <button class="btn btn-primary w-100" disabled>Clear</button>
+  <!-- Clear Button -->
+  <div class="d-flex justify-content-end">
+    <button class="btn btn-sm btn-primary" (click)="clearFilter()">Clear</button>
+  </div>
 </div>

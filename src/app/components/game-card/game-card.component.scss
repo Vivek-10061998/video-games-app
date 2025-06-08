@@ -1,25 +1,48 @@
 .game-card {
   background-color: #0e1a2b;
-  color: #ffffff;
+  color: #c1d1e8;
   font-family: 'Mulish', sans-serif;
+  width: 100%;
   margin-bottom: 1rem;
 }
 
-h5 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
+.card-left {
+  flex: 1;
+  padding-right: 1rem;
 }
 
-.score-badge {
-  width: 40px;
-  height: 40px;
-  background-color: #5692e8;
+.game-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
   color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.release {
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+}
+
+.summary {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-bottom: 0;
+}
+
+.badge-wrapper {
+  flex-shrink: 0;
+}
+
+.rating-badge {
+  background-color: #5692e8;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 600;
-  font-size: 1rem;
-  font-family: 'Montserrat', sans-serif;
 }
